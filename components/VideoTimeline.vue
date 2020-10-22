@@ -30,14 +30,15 @@
       <v-card v-if="modifyEditMenu">
         <v-card-text>
           <v-btn small icon
+              title="Remove edit"
               @click="removeEdit(activeEdit)"
               class="modify-remove-btn">
             <v-icon>mdi-delete</v-icon></v-btn>
           <v-btn-toggle v-model="activeEdit.type" rounded>
-            <v-btn icon value="scale">
+            <v-btn icon value="scale" title="Scale">
               <v-icon>mdi-resize</v-icon>
             </v-btn>
-            <v-btn icon value="cut">
+            <v-btn icon value="cut" title="Cut">
               <v-icon>mdi-scissors-cutting</v-icon>
             </v-btn>
           </v-btn-toggle>
@@ -165,24 +166,26 @@ export default {
 
   .timeline {
     position: relative;
-    outline: 1px solid #fff;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid #fff;
     height: 30px;
+    cursor: pointer;
   }
 
   .edit {
     position: absolute;
-    height: 30px;
-    background: #fff;
+    height: 50px;
+    background: #1976d2;
     top: 0;
+    margin-top: -10px;
     min-width: 7px;
+    border-radius: 3px;
 
     &:hover {
-      outline: 1px solid;
+      background: #fff;
     }
   }
-
-
-
 }
 
 .modify-remove-btn {

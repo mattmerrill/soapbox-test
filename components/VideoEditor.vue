@@ -12,7 +12,6 @@
           <source :src="src" type="video/mp4" />
         </video-player>
 
-        <v-card-subtitle>Edits:</v-card-subtitle>
         <video-timeline :edits="edits" :duration="video.duration"></video-timeline>
       </v-card-text>
       <v-expand-transition>
